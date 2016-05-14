@@ -315,6 +315,10 @@ if [[ ! "$BUILD_DIR" == "/app" ]]; then
 fi
 
 
+# Django-bower install support.
+sub-env $BIN_DIR/steps/djangobower-install
+
+
 # Django collectstatic support.
 # The buildpack automatically runs collectstatic for Django applications.
 # This is the cause for the majority of build failures on the Python platform.
