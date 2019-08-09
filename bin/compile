@@ -316,7 +316,7 @@ fi
 
 
 # Django-bower install support.
-sub-env $BIN_DIR/steps/djangobower-install
+sub_env $BIN_DIR/steps/djangobower-install
 
 
 # Django collectstatic support.
