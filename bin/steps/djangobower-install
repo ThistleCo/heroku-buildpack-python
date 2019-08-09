@@ -17,8 +17,6 @@ MANAGE_FILE=${MANAGE_FILE:-fakepath}
 # Ensure that django-bower is explicitly specified in requirements.txt
 pip-grep -s requirements.txt django-bower && DJANGO_BOWER_INSTALLED=1
 
-bpwatch start djangobower_install  # metrics collection
-
 if [ -f "$MANAGE_FILE" ] && [ "$DJANGO_BOWER_INSTALLED" ]; then
     set +e
 
@@ -47,4 +45,3 @@ if [ -f "$MANAGE_FILE" ] && [ "$DJANGO_BOWER_INSTALLED" ]; then
     echo
 fi
 
-bpwatch stop djangobower_install  # metrics collection
